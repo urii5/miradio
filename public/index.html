@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Uri - Transmisión en Vivo</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/player.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header style="padding: 2rem 0; display: flex; justify-content: space-between; align-items: center;">
+            <h1 class="text-gradient" style="font-size: 1.5rem;">RADIO URI</h1>
+            <nav>
+                <a href="#about" style="margin-right: 1.5rem; color: var(--color-text-muted);">Nosotros</a>
+                <a href="/login" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Admin Login</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="player-container">
+                <div class="live-indicator" id="liveIndicator">
+                    <span class="live-dot"></span> EN VIVO
+                </div>
+                
+                <img src="https://via.placeholder.com/300x300/18181b/6b46c1?text=Radio+Uri" alt="Album Art" class="player-artwork" id="artwork">
+                
+                <div class="track-info">
+                    <h2 class="track-title text-gradient" id="trackTitle">Cargando...</h2>
+                    <p class="track-artist" id="trackArtist">Esperando señal...</p>
+                </div>
+                
+                <div class="controls">
+                    <button class="play-btn" id="playBtn">▶</button>
+                </div>
+                
+                <div class="volume-control">
+                    <i class="fas fa-volume-down" style="color: var(--color-text-muted);"></i>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+                    <i class="fas fa-volume-up" style="color: var(--color-text-muted);"></i>
+                </div>
+            </div>
+
+            <section id="about" style="text-align: center; margin-top: 4rem; color: var(--color-text-muted);">
+                <h3>Sobre Radio Uri</h3>
+                <p style="max-width: 600px; margin: 1rem auto;">
+                    La mejor música seleccionada para ti, disponible 24/7. Transmitiendo con la mejor calidad y estilo.
+                </p>
+            </section>
+        </main>
+        
+        <footer style="text-align: center; padding: 2rem; color: #64748b; font-size: 0.9rem;">
+            &copy; 2026 Radio Uri. Todos los derechos reservados.
+        </footer>
+    </div>
+    
+    <script src="js/player.js"></script>
+</body>
+</html>

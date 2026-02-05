@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Uri - Panel Admin</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header text-gradient">Radio Admin</div>
+            <nav>
+                <div class="nav-item active"><i class="fas fa-home"></i> Dashboard</div>
+                <div class="nav-item"><i class="fas fa-music"></i> Playlist</div>
+                <div class="nav-item"><i class="fas fa-users"></i> Users</div>
+                <div class="nav-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="nav-item" id="logoutBtn" style="margin-top: auto; color: #ef4444;"><i
+                        class="fas fa-sign-out-alt"></i> Logout</div>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <h2 style="margin-bottom: 2rem;">Dashboard Overview</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="liveListeners">0</div>
+                    <div class="stat-label">Current Listeners</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="uptime">0m</div>
+                    <div class="stat-label">Stream Uptime</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Excellent</div>
+                    <div class="stat-label">Stream Health</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="margin-bottom: 1.5rem;">Update Metadata</h3>
+                <form id="updateMetadataForm">
+                    <div class="form-group">
+                        <label class="form-label">Title</label>
+                        <input type="text" id="metaTitle" class="input" placeholder="Song Title">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Artist</label>
+                        <input type="text" id="metaArtist" class="input" placeholder="Artist Name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Album/Show</label>
+                        <input type="text" id="metaAlbum" class="input" placeholder="Album Name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Artwork URL</label>
+                        <input type="text" id="metaArtwork" class="input" placeholder="https://...">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Now</button>
+                    <span id="statusMsg" style="margin-left: 1rem;"></span>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
