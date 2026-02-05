@@ -46,3 +46,15 @@ exports.getStatus = async (req, res) => {
         res.status(503).json({ is_live: false, message: "Stream server unreachable" });
     }
 };
+
+exports.getConfig = (req, res) => {
+    const icecastServer = process.env.ICECAST_SERVER || 'http://localhost:8000';
+    const mount = process.env.STREAM_MOUNT || '/radio.mp3';
+    // Construct full public URL
+    // If using Caster.fm, they provide a specific direct URL, usually server + mount
+    const streamUrl = `${icecastServer}${mount}`;
+
+    res.json({
+        streamUrl: streamUrl
+    });
+};
